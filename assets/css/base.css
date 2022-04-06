@@ -1,0 +1,103 @@
+* {
+    --primary: rgb(252, 226, 173);
+    --secondary: rgb(234, 154, 101);
+    --third: rgb(120, 68, 16);
+    --bluedy: rgb(249, 84, 141);
+}
+
+body {
+    background-color: var(--primary);
+}
+
+hr {
+    border: 2px solid white;
+    background-color: white;
+}
+
+.color_third {
+    color: var(--third);
+}
+a.color_bluedy {
+    color: var(--bluedy) !important;
+}
+
+#blob_bg {
+    background: url(../img/blob_2.png);
+    background-size: 75%;
+    padding-right: 75px;
+    background-repeat: no-repeat;
+    background-position-x: start;
+    background-position-y: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.patrick-hand {
+    font-family: 'Patrick Hand', cursive;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #blob_bg {
+      background-size: 100%;
+      background-position-x: center;
+      padding: 60px 0px;
+      padding-left: 30px;
+    }
+}
+
+
+.btn-custom_1 {
+    border-radius: 50px !important;
+    background-color: white !important;
+    color: var(--secondary) !important;
+    border: 2px solid white !important;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
+}
+
+.btn-custom_1:focus, .btn-custom_1:active {
+    border: 2px solid white !important;
+    box-shadow: none !important;
+}
+
+
+/**     PRICES      **/
+.gatomaluko {
+    border-radius: 50%;
+    width: 50%;
+}
+
+
+/*****    ICONS     *****/
+.icon_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50px;
+    font-size: large;
+    margin-right: 10px;
+    color: var(--secondary) !important;
+}
+
+/*
+.facebook_icon {color: #4267B2 !important;}
+.twitter_icon {color: #1DA1F2 !important;}
+.deviantart_icon {color: #05CC46 !important;}
+.instagram_icon {color: #833AB4 !important;}*/
+
+
+
+
+
+
+
+
+/**     CREDITS     **/
+#credits {
+    font-family: 'Patrick Hand', cursive;
+}
