@@ -1,5 +1,21 @@
 import React, { Component } from 'react';
 
+import image06 from '../assets/img/prices/06.png';
+import image07 from '../assets/img/prices/07.png';
+import image08 from '../assets/img/prices/08.png';
+import image09 from '../assets/img/prices/09.png';
+import image10 from '../assets/img/prices/10.png';
+import image11 from '../assets/img/prices/11.png';
+import image12 from '../assets/img/prices/12.png';
+import image13 from '../assets/img/prices/13.png';
+import image14 from '../assets/img/prices/14.png';
+import image15 from '../assets/img/prices/15.png';
+import image16 from '../assets/img/prices/16.png';
+import image17 from '../assets/img/prices/17.png';
+import image18 from '../assets/img/prices/18.png';
+import image19 from '../assets/img/prices/19.png';
+import image20 from '../assets/img/prices/20.png';
+import image21 from '../assets/img/prices/21.png';
 
 class Commissions extends Component {
   render() {
@@ -9,72 +25,72 @@ class Commissions extends Component {
             <h5>Here you can see examples and the prices of my art!</h5><br/>
             <div className="row justify-content-center">
                 <div className="col-12 col-md-4 py-2 text-end">
-                    <img src="assets/img/prices/06.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image06} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 text-start">
-                    <img src="assets/img/prices/07.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image07} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             <h4><br/><strong>Icon: $25 (extra character +$15)</strong><br/><br/><br/></h4>
 
-            <div className="row justify-content-center">
+            <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-md-4 py-2 text-end">
-                    <img src="assets/img/prices/08.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image08} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 text-start">
-                    <img src="assets/img/prices/11.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image11} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             <h4><br/><strong>Bust: $30 (extra character: +$20)</strong><br/><br/><br/></h4>
 
-            <div className="row justify-content-center">
+            <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-md-4 py-2 text-end">
-                    <img src="assets/img/prices/09.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image09} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 text-start">
-                    <img src="assets/img/prices/10.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image10} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 pt-3 text-center">
-                    <img src="assets/img/prices/15.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image15} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             <h4><br/><strong>Halfbody: $40 (extra character: +$30)</strong><br/><br/><br/></h4>
 
-            <div className="row justify-content-center">
+            <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-md-4 py-2 text-end">
-                    <img src="assets/img/prices/12.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image12} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 text-start">
-                    <img src="assets/img/prices/13.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image13} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 text-center">
-                    <img src="assets/img/prices/14.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image14} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             <h4><br/><strong>Fullbody: $50 (extra character: +$30)</strong><br/><br/><br/></h4>
 
             <div className="row justify-content-center">
                 <div className="col-12 col-md-4 py-2 text-end">
-                    <img src="assets/img/prices/16.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image16} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 text-start">
-                    <img src="assets/img/prices/17.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image17} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             
             <div className="row justify-content-center">
                 <div className="col-12 col-md-4 py-2 text-end">
-                    <img src="assets/img/prices/18.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image18} className="img-fluid" width="100%" alt=""/>
                 </div>
                 <div className="col-12 col-md-4 py-2 text-start">
-                    <img src="assets/img/prices/20.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image20} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             <h4><br/><strong>Chibi: $25 (extra character: +$15)</strong><br/><br/><br/></h4>
 
             <div className="row justify-content-center">
                 <div className="col-12 col-md-6">
-                    <img src="assets/img/prices/19.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image19} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             <h4><br/><strong>Icon Chibi: $15 (extra character: +$10)</strong><br/><br/><br/></h4>
@@ -82,7 +98,7 @@ class Commissions extends Component {
 
             <div className="row justify-content-center">
                 <div className="col-12 col-md-6">
-                    <img src="assets/img/prices/21.png" className="img-fluid" width="100%" alt=""/>
+                    <img src={image21} className="img-fluid" width="100%" alt=""/>
                 </div>
             </div>
             <h4><br/><strong>NSFW: +$15</strong><br/>

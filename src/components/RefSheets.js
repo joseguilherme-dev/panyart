@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+import image01 from '../assets/img/prices/01.png';
+import image02 from '../assets/img/prices/02.png';
+import image03 from '../assets/img/prices/03.png';
+import image04 from '../assets/img/prices/04.png';
+import image05 from '../assets/img/prices/05.png';
+
 
 class RefSheets extends Component {
     render () {
@@ -8,7 +14,7 @@ class RefSheets extends Component {
                 <h2>♥ REFSHEETS ♥ </h2><br/>
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
-                        <img src="assets/img/prices/01.png" className="img-fluid" width="100%" alt=""/>
+                        <img src={image01} className="img-fluid" width="100%" alt=""/>
                     </div>
                 </div>
                 <h4><br/>
@@ -19,7 +25,7 @@ class RefSheets extends Component {
                 
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
-                        <img src="assets/img/prices/02.png" className="img-fluid" width="50%" alt=""/>
+                        <img src={image02} className="img-fluid" width="50%" alt=""/>
                     </div>
                 </div>
                 <h4><br/>
@@ -30,7 +36,7 @@ class RefSheets extends Component {
 
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
-                        <img src="assets/img/prices/03.png" className="img-fluid" width="100%" alt=""/>
+                        <img src={image03} className="img-fluid" width="100%" alt=""/>
                     </div>
                 </div>
                 <h4><br/>
@@ -41,7 +47,7 @@ class RefSheets extends Component {
 
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
-                        <img src="assets/img/prices/04.png" className="img-fluid" width="100%" alt=""/>
+                        <img src={image04} className="img-fluid" width="100%" alt=""/>
                     </div>
                 </div>
                 <h4><br/>
@@ -51,7 +57,7 @@ class RefSheets extends Component {
 
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
-                        <img src="assets/img/prices/05.png" className="img-fluid" width="100%" alt=""/>
+                        <img src={image05} className="img-fluid" width="100%" alt=""/>
                     </div>
                 </div>
                 <h4><br/>

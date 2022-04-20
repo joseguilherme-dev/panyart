@@ -41,7 +41,7 @@ class Prices extends Component {
 
                 <div className='row pb-5 mb-5'>
                     <div className='col-12 text-center'>
-                        <Link to="commissions" className="btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-3 me-3">Commissions</Link>
+                        <Link to="illustrations" className="btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-3 me-3">Illustrations</Link>
                         <Link to="refsheets" className="btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-3 me-3">RefSheets</Link>
                     </div>
                 </div>
