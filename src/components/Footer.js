@@ -9,12 +9,20 @@ import SocialIcons from './SocialIcons';
 class Footer extends Component {
   render() {
     return (
-        <footer class="container-fluid">
+        <footer className="container-fluid">
+            <div className="row justify-content-center text-center">
+                <div className="col-12 col-md-4 patrick-hand color_third">
+                    <h4>
+                        Interested in my work?<br/>
+                        <strong>Contact me</strong> through my socials:
+                    </h4>
+                </div>
+            </div>
             <SocialIcons/>
-            <div class="row pt-2">
-                <div class="col-12 text-center bg-white" id="credits">
+            <div className="row pt-2">
+                <div className="col-12 text-center bg-white" id="credits">
                     <small>
-                        © All rights reserved. Developed with ♡ by: @joseguilherme-dev
+                        © PanYart | All rights reserved | Developed with ♡ by: @joseguilherme-dev
                     </small>
                 </div>
             </div>
