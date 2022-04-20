@@ -7,6 +7,7 @@ import AnimatedRoutes from './components/AnimatedRoutes';
 /* React Router */
 import { 
   BrowserRouter,
+  HashRouter,
 } from "react-router-dom";
 
 /* CSS */
@@ -17,10 +18,10 @@ import './assets/css/hover.css';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar/>
         <AnimatedRoutes/>
-      </BrowserRouter>
+      </HashRouter>
       <PreFooter/>
       <Footer/>
     </div>

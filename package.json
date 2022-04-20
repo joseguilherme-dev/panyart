@@ -1,7 +1,7 @@
 {
   "name": "panyart",
   "version": "0.1.0",
-  "homepage": "https://joseguilherme-dev.github.io/panyart",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "cra-template": "1.1.3",
