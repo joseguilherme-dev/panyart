@@ -60,6 +60,14 @@ a.color_bluedy {
     box-shadow: none !important;
 }
 
+/**     HOME        **/
+.panyart_gif {
+    max-width: 170px !important;
+}
+
+.introduction {
+    font-family: 'Patrick Hand', cursive;
+}
 
 /**     PRICES      **/
 .gatomaluko {
@@ -67,6 +75,11 @@ a.color_bluedy {
     width: 50%;
 }
 
+
+/**    SOCIAL       **/
+.interested {
+    font-family: 'Patrick Hand', cursi
+}
 
 /*****    ICONS     *****/
 .icon_box {
