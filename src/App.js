@@ -16,6 +16,9 @@ import {
 /* CSS */
 import './assets/css/base.css';
 import './assets/css/hover.css';
+import PreFooter from './components/PreFooter';
+import Commissions from './components/Commissions';
+import RefSheets from './components/RefSheets';
 
 
 function App() {
@@ -26,9 +29,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="queue" element={<Queue />}/>
-          <Route path="prices" element={<Prices />}/>
+          <Route path="prices" element={<Prices />}>
+            <Route path="commissions" element={<Commissions />}/>
+            <Route path="refsheets" element={<RefSheets />}/>
+          </Route>
         </Routes>
       </BrowserRouter>
+      <PreFooter/>
       <Footer/>
     </div>
   );
