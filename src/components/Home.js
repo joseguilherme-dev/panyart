@@ -3,9 +3,17 @@ import {Link } from "react-router-dom";
 import panyartCoverPart1 from '../assets/img/panyart_cover_part1.jpg';
 import panyartCoverPart2 from '../assets/img/panyart_cover_part2.jpg';
 
+
+/* Animated Routes */
+import {motion} from 'framer-motion';
+
 function Home () {
     return (
-        <main>
+        <motion.main
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+        >
             <div className='container'>
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-4 py-md-5 text-center">
@@ -16,7 +24,7 @@ function Home () {
                     </div>
                 </div>
             </div>
-        </main>
+        </motion.main>
     )
 }
 

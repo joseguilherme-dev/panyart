@@ -18,10 +18,17 @@ import RefSheets from './RefSheets';
 /* Custom Images */
 import gatoMaluko from '../assets/img/gatomaluko.png';
 
+/* Animated Routes */
+import {motion} from 'framer-motion';
+
 class Prices extends Component {
   render() {
     return (
-        <main>
+        <motion.main
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+        >
             <div className='container'>
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-5 text-center">
@@ -54,7 +61,7 @@ class Prices extends Component {
                     </div>
                 </div>
             </div>
-        </main>
+        </motion.main>
     )
   }
 }

@@ -6,11 +6,17 @@ import image03 from '../assets/img/prices/03.png';
 import image04 from '../assets/img/prices/04.png';
 import image05 from '../assets/img/prices/05.png';
 
+/* Animated Routes */
+import {motion} from 'framer-motion';
 
 class RefSheets extends Component {
     render () {
         return (
-            <div>
+            <motion.div
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                exit={{opacity: 0}}
+            >
                 <h2>♥ REFSHEETS ♥ </h2><br/>
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
@@ -64,7 +70,7 @@ class RefSheets extends Component {
                     <strong>Chibi: $15 (extra ones: $5)</strong><br/>
                     - With clothes, accessories, alternative hair style, etc.<br/><br/><br/>
                 </h4>
-            </div>
+            </motion.div>
         )
     }
 }
