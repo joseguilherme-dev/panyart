@@ -14,6 +14,9 @@ hr {
     background-color: white;
 }
 
+.color_secondary {
+    color: var(--secondary) !important;
+}
 .color_third {
     color: var(--third);
 }
@@ -102,8 +105,6 @@ a.color_bluedy {
 .twitter_icon {color: #1DA1F2 !important;}
 .deviantart_icon {color: #05CC46 !important;}
 .instagram_icon {color: #833AB4 !important;}*/
-
-
 
 
 

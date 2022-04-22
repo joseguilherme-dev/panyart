@@ -1,8 +1,8 @@
 {
   "name": "panyart",
   "version": "0.1.0",
-  "homepage": ".",
-  "private": true,
+  "homepage": "https://panyart.studio",
+  "private": false,
   "dependencies": {
     "cra-template": "1.1.3",
     "framer-motion": "^6.3.0",
