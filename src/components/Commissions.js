@@ -39,7 +39,7 @@ class Commissions extends Component {
                     <img src={image07} className="img-thumbnail" width="100%" alt=""/>
                 </div>
             </div>
-            <h4><br/><strong>Icon: $25 (extra character +$15)</strong><br/><br/><br/></h4>
+            <h4><br/><strong>Icon: $35 (extra character +$25)</strong><br/><br/><br/></h4>
 
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-md-4 py-2 text-end">
@@ -49,7 +49,7 @@ class Commissions extends Component {
                     <img src={image11} className="img-thumbnail" width="100%" alt=""/>
                 </div>
             </div>
-            <h4><br/><strong>Bust: $30 (extra character: +$20)</strong><br/><br/><br/></h4>
+            <h4><br/><strong>Bust: $50 (extra character: +$40)</strong><br/><br/><br/></h4>
 
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-md-4 py-2 text-end">
@@ -62,7 +62,7 @@ class Commissions extends Component {
                     <img src={image15} className="img-thumbnail" width="100%" alt=""/>
                 </div>
             </div>
-            <h4><br/><strong>Halfbody: $40 (extra character: +$30)</strong><br/><br/><br/></h4>
+            <h4><br/><strong>Halfbody: $60 (extra character: +$50)</strong><br/><br/><br/></h4>
 
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-md-4 py-2 text-end">
@@ -75,7 +75,7 @@ class Commissions extends Component {
                     <img src={image14} className="img-thumbnail" width="100%" alt=""/>
                 </div>
             </div>
-            <h4><br/><strong>Fullbody: $50 (extra character: +$30)</strong><br/><br/><br/></h4>
+            <h4><br/><strong>Fullbody: $70 (extra character: +$60)</strong><br/><br/><br/></h4>
 
             <div className="row justify-content-center">
                 <div className="col-12 col-md-4 py-2 text-end">
@@ -94,14 +94,14 @@ class Commissions extends Component {
                     <img src={image20} className="img-thumbnail" width="100%" alt=""/>
                 </div>
             </div>
-            <h4><br/><strong>Chibi: $25 (extra character: +$15)</strong><br/><br/><br/></h4>
+            <h4><br/><strong>Chibi: $35 (extra character: +$25)</strong><br/><br/><br/></h4>
 
             <div className="row justify-content-center">
                 <div className="col-12 col-md-6">
                     <img src={image19} className="img-thumbnail" width="100%" alt=""/>
                 </div>
             </div>
-            <h4><br/><strong>Icon Chibi: $15 (extra character: +$10)</strong><br/><br/><br/></h4>
+            <h4><br/><strong>Icon Chibi: $25 (extra character: +$15)</strong><br/><br/><br/></h4>
 
 
             <div className="row justify-content-center">
@@ -109,7 +109,7 @@ class Commissions extends Component {
                     <img src={image21} className="img-thumbnail" width="100%" alt=""/>
                 </div>
             </div>
-            <h4><br/><strong>NSFW: +$15</strong><br/>
+            <h4><br/><strong>NSFW: +$20</strong><br/>
 
             - Check out more examples on
             <a className="color_bluedy" href="https://twitter.com/Bluedy_X" target="_blank">
