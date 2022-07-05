@@ -5,6 +5,9 @@ import image02 from '../assets/img/prices/02.png';
 import image03 from '../assets/img/prices/03.png';
 import image04 from '../assets/img/prices/04.png';
 import image05 from '../assets/img/prices/05.png';
+import image06 from '../assets/img/prices/23.png';
+import image07 from '../assets/img/prices/22.png';
+import image08 from '../assets/img/prices/24.png';
 
 /* Animated Routes */
 import {motion} from 'framer-motion';
@@ -24,21 +27,36 @@ class RefSheets extends Component {
                     </div>
                 </div>
                 <h4><br/>
-                    <strong>Fullbody: $50</strong><br/>
+                    <strong>Front View: $60</strong><br/>
                     - Includes basic info, color palette and colored background.<br/><br/>
                     <strong>Back View: $30</strong><br/><br/><br/>
                 </h4>
                 
+                <div className="row ps-3 justify-content-center">
+                    <div className="col-12 ms-5 ps-5 col-md-6">
+                        <img src={image06} className="img-fluid" width="50%" alt=""/>
+                    </div>
+                </div>
+
+                <h4><br/>
+                    <strong>Side View: $25</strong><br/>
+                    <br/><br/><br/>
+                </h4>
+
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
                         <img src={image02} className="img-fluid" width="50%" alt=""/>
                     </div>
                 </div>
+
                 <h4><br/>
                     <strong>Extra View: $15</strong><br/>
                     - With clothes, accessories, alternative hair style, etc.
                     <br/><br/><br/>
                 </h4>
+
+                                
+
 
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
@@ -50,7 +68,21 @@ class RefSheets extends Component {
                     - With different expressions, alternative hair style, etc.
                     <br/><br/><br/>
                 </h4>
-
+                <br/><br/>
+                <div className="row align-items-center justify-content-center">
+                    <div className="col-6 col-md-2">
+                        <img src={image07} className="img-fluid" width="100%" alt=""/>
+                    </div>
+                    <div className="col-6 col-md-2">
+                        <img src={image08} className="img-fluid" width="100%" alt=""/>
+                    </div>
+                </div>
+                <h4><br/>
+                    <strong>Close-up: $5 (each)</strong><br/>
+                    - Mouth, eyes, paws, etc.
+                    <br/><br/><br/>
+                </h4>
+                <br/><br/>
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6">
                         <img src={image04} className="img-fluid" width="100%" alt=""/>
@@ -67,7 +99,7 @@ class RefSheets extends Component {
                     </div>
                 </div>
                 <h4><br/>
-                    <strong>Chibi: $15 (extra ones: $5)</strong><br/>
+                    <strong>Chibi: $20 (extra ones: $5)</strong><br/>
                     - With clothes, accessories, alternative hair style, etc.<br/><br/><br/>
                 </h4>
             </motion.div>
