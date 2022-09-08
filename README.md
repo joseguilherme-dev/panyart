@@ -1,7 +1,7 @@
 # Panyart
 
-<img src="assets/reactjs.svg"/>
-<img src="assets/bootstrap.svg"/>
+<img src="assets/reactjs.svg"></img>
+<img src="assets/bootstrap.svg"></img>
 
 This project is a landing page for a digital artist.
 
