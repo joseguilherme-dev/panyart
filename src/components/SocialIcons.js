@@ -20,7 +20,7 @@ class SocialIcons extends Component {
                     <a className="icon_box deviantart_icon hvr-float-shadow " target="_blank" href="https://www.deviantart.com/panyart">
                         <i className="fa fa-brands fa-deviantart"></i>
                     </a>
-                    <a className="icon_box instagram_icon hvr-float-shadow " target="_blank" href="https://www.instagram.com/pan_yart/">
+                    <a className="icon_box instagram_icon hvr-float-shadow " target="_blank" href="https://www.instagram.com/panyart.studio/">
                         <i className="fa fa-brands fa-instagram"></i>
                     </a>
                 </div>

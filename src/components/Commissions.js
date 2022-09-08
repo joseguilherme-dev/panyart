@@ -25,9 +25,10 @@ class Commissions extends Component {
   render() {
     return (
         <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity: 0}}
+        initial={{opacity: 0, x: 100}}
+        animate={{opacity: 1, x: 0}}
+        exit={{opacity: 0, x: -100}}
+        transition={{duration: 1}}
         >
             <h2>♥ ILUSTRATIONS ♥ </h2>
             <h5>Here you can see examples and the prices of my art!</h5><br/>
