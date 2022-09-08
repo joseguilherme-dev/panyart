@@ -18,10 +18,10 @@ import './assets/css/hover.css';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Navbar/>
         <AnimatedRoutes/>
-      </BrowserRouter>
+      </HashRouter>
       <PreFooter/>
       <Footer/>
     </div>
