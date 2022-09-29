@@ -15,6 +15,18 @@ hr {
     background-color: white;
 }
 
+.color_primary {
+    color: var(--primary) !important;
+}
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+.color_primary_shadow {
+    text-shadow: 1px 1px 2px white;
+}
+
 .color_secondary {
     color: var(--secondary) !important;
 }
@@ -113,6 +125,11 @@ a.color_bluedy {
 .instagram_icon {color: #833AB4 !important;}*/
 
 
+input {
+    border: 2px solid rgba(133, 90, 49, 1) !important;
+    box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
+    border-radius: 30px !important;
+}
 
 
 
@@ -120,4 +137,23 @@ a.color_bluedy {
 /**     CREDITS     **/
 #credits {
     font-family: 'Patrick Hand', cursive;
+}
+
+
+
+.coins-box {
+    position: relative;
+}
+
+.coins-box input {
+    font-size: 20px;
+    font-weight: bold;
+    color: black !important;
+    background: white !important;
+}
+.coins-box img {
+    position: absolute;
+    width: 35px;
+    left: 63%;
+    top: 15%;
 }
