@@ -5,14 +5,15 @@ import PreFooter from './components/PreFooter';
 import AnimatedRoutes from './components/AnimatedRoutes';
 
 /* React Router */
-import { 
-  BrowserRouter,
+import {
   HashRouter,
 } from "react-router-dom";
 
 /* CSS */
 import './assets/css/base.css';
 import './assets/css/hover.css';
+
+export const BASEURL = "http://localhost:8000"
 
 
 function App() {
