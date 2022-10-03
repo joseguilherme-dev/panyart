@@ -18,6 +18,8 @@ import Login from './User/Login/index'
 import {AnimatePresence} from 'framer-motion';
 import UserArea from './User/Area';
 import Redeem from './User/Redeem';
+import Edit from './User/Edit';
+import ChangePassword from './User/ChangePassword';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -34,6 +36,8 @@ function AnimatedRoutes() {
                 <Route path="/login" element={<Login />}/>
                 <Route path="/user" element={<UserArea />}/>
                 <Route path="/user/redeem" element={<Redeem />}/>
+                <Route path="/user/edit" element={<Edit />}/>
+                <Route path="/user/change_password" element={<ChangePassword />}/>
             </Routes>
         </AnimatePresence>
     )
