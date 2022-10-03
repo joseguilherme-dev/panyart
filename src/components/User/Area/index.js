@@ -71,16 +71,16 @@ function Area () {
                         </div>
                         <div className='row mt-4'>
                             <div className='col-6'>
-                                <a
-                                className='btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3'>
+                                <Link to="edit"
+                                    className='btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3'>
                                     Edit Account
-                                </a>
+                                </Link>
                             </div>
                             <div className='col-6'>
-                                <a
+                                <Link to='change_password'
                                 className='btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3' disabled>
                                     Change Password
-                                </a>
+                                </Link>
                             </div>
                         </div>                 
                     </div>
