@@ -1,5 +1,5 @@
 import { useState, useEffect,  } from 'react';
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate, Navigate, Link } from "react-router-dom";
 import Cookies from 'universal-cookie';
 
 // Axios
@@ -24,8 +24,6 @@ function Area () {
         .catch((error) => {
             navigate('/login');
         }).then((response) => {
-            console.log(response)
-            console.log('entrou aq lol')
             setUserInfo(response.data.personal)
         })
     }
@@ -46,7 +44,7 @@ function Area () {
             
             <div className='container'>
                 <div className='row justify-content-center text-center'>
-                    <div className='col-4 my-5 color_third'>
+                    <div className='col-5 mt-3 mb-5 color_third'>
                         <p> Hey, <strong>{userInfo.nickname}</strong>!</p>
                         <small> <i>Your Pan Coins:</i></small><br/>
                         <div className='coins-box'>
@@ -55,41 +53,32 @@ function Area () {
                             type='text' defaultValue={userInfo.coins} disabled/>
                             <img src={panCoinsImg}/>
                         </div>
-                        
-                        
-
-                        <hr className='mt-4'></hr>
-
-                        <div className='row'>
-                            <div className='col-12 mt-2 mb-1'>
-                                <h6>Coins store:</h6>
-                            </div>
+                        <hr className='mt-5'></hr>
+                        <div className='row mt-5'>
                             <div className='col-6'>
-                                <a
-                                className='btn hvr-wobble-top btn-lg btn-custom_1 px-4 me-3'>
+                                <Link to="redeem" className='btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3' data-toggle="modal" data-target="#exampleModal">
                                     Redeem Coins
-                                </a>
+                                </Link>
                             </div>
                             <div className='col-6'>
-                                <a
-                                className='btn hvr-wobble-top btn-lg btn-custom_1 px-4 me-3' disabled>
-                                    Buy on Store
-                                </a>
+                                <span className="d-inline-block w-100" tabindex="0" data-toggle="tooltip" title="In soon!">
+                                    <button data-toggle="tooltip" data-placement="top" title="Tooltip on top"
+                                    className='btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3' disabled>
+                                        Buy on Store
+                                    </button>
+                                </span>
                             </div>
                         </div>
-
-                        <h6 className='mt-3'>Account:</h6>
-
-                        <div className='row'>
+                        <div className='row mt-4'>
                             <div className='col-6'>
                                 <a
-                                className='btn hvr-wobble-top btn-lg btn-custom_1 px-4 me-3'>
-                                    Edit Information
+                                className='btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3'>
+                                    Edit Account
                                 </a>
                             </div>
                             <div className='col-6'>
                                 <a
-                                className='btn hvr-wobble-top btn-lg btn-custom_1 px-4 me-3' disabled>
+                                className='btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3' disabled>
                                     Change Password
                                 </a>
                             </div>
