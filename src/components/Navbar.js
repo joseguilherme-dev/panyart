@@ -15,6 +15,9 @@ function Navbar () {
                     <Link to='/prices' className='btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-4 me-3'>
                         Prices
                     </Link>
+                    <Link to='/login' className='btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-4 me-3'>
+                        Client Area
+                    </Link>
                 </div>
             </div>
         </div>
