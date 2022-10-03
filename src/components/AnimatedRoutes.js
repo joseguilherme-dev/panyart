@@ -17,6 +17,7 @@ import Login from './User/Login/index'
 
 import {AnimatePresence} from 'framer-motion';
 import UserArea from './User/Area';
+import Redeem from './User/Redeem';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -31,7 +32,8 @@ function AnimatedRoutes() {
                     <Route path="refsheets" element={<RefSheets />}/>
                 </Route>
                 <Route path="/login" element={<Login />}/>
-                <Route path="/user_area" element={<UserArea />}/>
+                <Route path="/user" element={<UserArea />}/>
+                <Route path="/user/redeem" element={<Redeem />}/>
             </Routes>
         </AnimatePresence>
     )
