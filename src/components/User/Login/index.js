@@ -40,7 +40,7 @@ function Login () {
         const url = BASEURL + '/auth/personal'
         await axios.get(url, {withCredentials: true}).catch((error) => {
             navigate('/login');
-        }).finally(navigate('/user_area'))}
+        }).finally(navigate('/user'))}
     useEffect(() => {(async () => {await checkIfUserIsLoggedIn()})();}, [])
 
     // Perform login
@@ -59,7 +59,7 @@ function Login () {
         }).then((response) => {return response})
         if (response) {
             cookies.set('jwt', response.data.jwt, { path: '/' })
-            navigate('/user_area');
+            navigate('/user');
         }
     }
 
