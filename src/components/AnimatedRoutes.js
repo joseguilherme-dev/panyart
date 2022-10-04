@@ -20,6 +20,7 @@ import UserArea from './User/Area';
 import Redeem from './User/Redeem';
 import Edit from './User/Edit';
 import ChangePassword from './User/ChangePassword';
+import Register from './User/Register';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -34,6 +35,7 @@ function AnimatedRoutes() {
                     <Route path="refsheets" element={<RefSheets />}/>
                 </Route>
                 <Route path="/login" element={<Login />}/>
+                <Route path="/signup" element={<Register />}/>
                 <Route path="/user" element={<UserArea />}/>
                 <Route path="/user/redeem" element={<Redeem />}/>
                 <Route path="/user/edit" element={<Edit />}/>
