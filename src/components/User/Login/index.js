@@ -46,6 +46,7 @@ function Login () {
     // Perform login
     async function handleSubmit(e){
         e.preventDefault();
+        setValidForm(false)
         const url = BASEURL + '/auth/login'
         console.log(email, password)
         const response = await axios.post(url, {email, password}).catch((error) => {
@@ -56,6 +57,7 @@ function Login () {
                 setErrorMsg('Please, insert correct data.')
             else
                 setErrorMsg('Server is currently unavailable')
+            setValidForm(true)
         }).then((response) => {return response})
         if (response) {
             cookies.set('jwt', response.data.jwt, { path: '/' })
