@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Cookies from 'universal-cookie';
 
 // Axios
@@ -48,7 +48,6 @@ function Login () {
         e.preventDefault();
         setValidForm(false)
         const url = BASEURL + '/auth/login'
-        console.log(email, password)
         const response = await axios.post(url, {email, password}).catch((error) => {
             setError(true)
             if (error.response.status === 401)
@@ -115,9 +114,9 @@ function Login () {
                         <p className='color_third font-weight-medium'>
                             Wanna check the art oven?
                         </p>
-                        <button type="" className="btn btn-primary btn-lg w-100 hvr-wobble-top btn-custom_1 px-4">
+                        <Link to="/signup" className="btn btn-primary btn-lg w-100 hvr-wobble-top btn-custom_1 px-4">
                             Create an Account!
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

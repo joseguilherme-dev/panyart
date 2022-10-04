@@ -1,5 +1,5 @@
 export function validateEmail(email) {
-    if (!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/))
+    if (!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,6}$/))
         return false
     return true
 }
