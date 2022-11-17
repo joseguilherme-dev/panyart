@@ -86,7 +86,7 @@ function Area() {
                   Redeem Coins
                 </Link>
               </div>
-              <div className="col-12 col-md-6">
+              <div className="col-12 col-md-6 my-2">
                 <span
                   className="d-inline-block w-100"
                   tabindex="0"
@@ -114,7 +114,7 @@ function Area() {
                   Edit Account
                 </Link>
               </div>
-              <div className="col-12 col-md-6">
+              <div className="col-12 col-md-6 my-2">
                 <Link
                   to="change_password"
                   className="btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3"
