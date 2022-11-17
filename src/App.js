@@ -1,30 +1,27 @@
 /* Custom Components */
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import PreFooter from './components/PreFooter';
-import AnimatedRoutes from './components/AnimatedRoutes';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import PreFooter from "./components/PreFooter";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 /* React Router */
-import {
-  HashRouter,
-} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 /* CSS */
-import './assets/css/base.css';
-import './assets/css/hover.css';
+import "./assets/css/base.css";
+import "./assets/css/hover.css";
 
-export const BASEURL = "http://localhost:8000"
-
+export const BASEURL = "https://panyart-api.herokuapp.com";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <HashRouter basename={process.env.PUBLIC_URL}>
-        <Navbar/>
-        <AnimatedRoutes/>
+        <Navbar />
+        <AnimatedRoutes />
       </HashRouter>
-      <PreFooter/>
-      <Footer/>
+      <PreFooter />
+      <Footer />
     </div>
   );
 }
