@@ -33,8 +33,11 @@ function Register () {
     const [error, setError] = useState(false)
     const [errorMsg, setErrorMsg] = useState('')
 
+    const [loading, setLoading] = useState(false)
+
     async function handleSubmit(e){
         e.preventDefault();
+        setLoading(true)
         const url = BASEURL + '/auth/register'
         const response = await axios.post(
             url, {
@@ -58,6 +61,7 @@ function Register () {
             alert('User successfully created!')
             navigate('/login');
         }
+        setLoading(false)
     }
 
     return (
@@ -166,7 +170,8 @@ function Register () {
                                     </div>
                                 </div>
                             </div>
-                            <button 
+                            <button
+                            disabled={loading}
                             onClick={(e) => handleSubmit(e)}
                             className="btn btn-primary btn-lg w-100 hvr-wobble-top mt-4 btn-custom_1 px-4">
                                 Sign Up

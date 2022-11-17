@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 
 // Axios
@@ -8,14 +8,20 @@ import { BASEURL } from "../../../App";
 
 // Animated Routes
 import { motion } from "framer-motion";
-import VerifyOTP from "./verify";
 
-function ChangePassword() {
+function CreatePassword(props) {
   const navigate = useNavigate();
   const cookies = new Cookies();
 
-  // Stage controller
-  const [stage, setStage] = useState(1);
+  const { state } = useLocation();
+
+  var OTP = "";
+  var email = "";
+
+  if (state) {
+    OTP = state.OTP;
+    email = state.email;
+  }
 
   // Fields
   const [password1, setPassword1] = useState("");
@@ -55,12 +61,13 @@ function ChangePassword() {
   async function handleSubmit(e) {
     e.preventDefault();
     setValidForm(false);
-    const url = BASEURL + "/auth/password/reset";
+    const url = BASEURL + "/auth/password/forgot/perform";
     const response = await axios
-      .get(url, {
-        headers: {
-          authorization: cookies.get("jwt"),
-        },
+      .post(url, {
+        token: OTP,
+        email: email,
+        password1: password1,
+        password2: password2,
       })
       .catch((error) => {
         setError(true);
@@ -70,7 +77,12 @@ function ChangePassword() {
       .then((response) => {
         return response;
       });
-    if (response) setStage(2);
+    if (response) {
+      email = "";
+      OTP = "";
+      alert("Password successfully changed!");
+      navigate("/login");
+    }
     setValidForm(true);
   }
 
@@ -94,63 +106,51 @@ function ChangePassword() {
             </Link>
 
             <hr className="mt-5"></hr>
-
-            {stage === 1 ? (
-              <div>
-                <div className="px-5 mt-5">
-                  {error ? (
-                    <div class="alert alert-danger" role="alert">
-                      <strong>Ops!</strong> {errorMsg}
-                    </div>
-                  ) : (
-                    ""
-                  )}
-
-                  <h3>
-                    <strong>Change your password!</strong>
-                  </h3>
-                  <p>
-                    Your new password must:
-                    <br />[{eightCharacters ? "✔️" : "❌"}] contain at least{" "}
-                    <strong>8 characters</strong>.<br />[
-                    {oneLetter ? "✔️" : "❌"}] contain at least{" "}
-                    <strong>one letter</strong>.<br />[{oneNumber ? "✔️" : "❌"}
-                    ] contain at least <strong>one number</strong>.<br />[
-                    {passwordsMatch ? "✔️" : "❌"}]{" "}
-                    <strong>Be the same in the two fields</strong>.<br />
-                  </p>
-                  <input
-                    type="text"
-                    className="py-1 text-center px-3 w-100"
-                    placeholder="Enter your new password"
-                    onChange={(e) => setPassword1(e.target.value)}
-                  />
-
-                  <input
-                    type="text"
-                    className="mt-2 py-1 text-center px-3 w-100"
-                    placeholder="Enter your new password again"
-                    onChange={(e) => setPassword2(e.target.value)}
-                  />
-                  <button
-                    onClick={(e) => handleSubmit(e)}
-                    disabled={!validForm}
-                    className="mb-3 mt-3 btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3"
-                  >
-                    Continue
-                  </button>
-                </div>
-              </div>
-            ) : (
+            <div>
               <div className="px-5 mt-5">
-                <VerifyOTP
-                  data={{
-                    password1: password1,
-                    password2: password2,
-                  }}
+                {error ? (
+                  <div class="alert alert-danger" role="alert">
+                    <strong>Ops!</strong> {errorMsg}
+                  </div>
+                ) : (
+                  ""
+                )}
+
+                <h3>
+                  <strong>Change your password!</strong>
+                </h3>
+                <p>
+                  Your new password must:
+                  <br />[{eightCharacters ? "✔️" : "❌"}] contain at least{" "}
+                  <strong>8 characters</strong>.<br />[{oneLetter ? "✔️" : "❌"}
+                  ] contain at least <strong>one letter</strong>.<br />[
+                  {oneNumber ? "✔️" : "❌"}] contain at least{" "}
+                  <strong>one number</strong>.<br />[
+                  {passwordsMatch ? "✔️" : "❌"}]{" "}
+                  <strong>Be the same in the two fields</strong>.<br />
+                </p>
+                <input
+                  type="text"
+                  className="py-1 text-center px-3 w-100"
+                  placeholder="Enter your new password"
+                  onChange={(e) => setPassword1(e.target.value)}
                 />
+
+                <input
+                  type="text"
+                  className="mt-2 py-1 text-center px-3 w-100"
+                  placeholder="Enter your new password again"
+                  onChange={(e) => setPassword2(e.target.value)}
+                />
+                <button
+                  onClick={(e) => handleSubmit(e)}
+                  disabled={!validForm}
+                  className="mb-3 mt-3 btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3"
+                >
+                  Continue
+                </button>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
@@ -158,4 +158,4 @@ function ChangePassword() {
   );
 }
 
-export default ChangePassword;
+export default CreatePassword;
