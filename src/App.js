@@ -19,7 +19,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <ScrollToTopButton />
         <Navbar />
         <AnimatedRoutes />
         <Footer />
