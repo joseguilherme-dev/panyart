@@ -42,9 +42,9 @@ function renderIllustrations() {
 }
 
 function Commissions() {
-  //useEffect(() => {
-  //  window.scrollTo(0, 0);
-  //}, []);
+  useEffect(() => {
+    window.scrollTo(0, 1000);
+  }, []);
 
   return (
     <motion.div
