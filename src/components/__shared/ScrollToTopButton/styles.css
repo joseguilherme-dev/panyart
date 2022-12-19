@@ -1,0 +1,31 @@
+.scroll-to-top-button {
+  position: fixed;
+  background-color: rgb(252, 226, 173);
+  padding: 15px;
+  border-radius: 50%;
+  bottom: 35px;
+  right: 35px;
+  border: none;
+  box-shadow: 1px 1px 3px rgba(120, 68, 16, 0.9);
+}
+
+.scroll-to-top-button:hover {
+  background: #d4be90;
+}
+
+@keyframes animate-scroll-to-top-button {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.scroll-to-top-button {
+  scale: 0;
+  animation-name: animate-scroll-to-top-button;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
