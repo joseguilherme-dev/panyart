@@ -7,6 +7,9 @@ import profilePicture from "./assets/profilePicture.png";
 /* Animated Routes */
 import { motion } from "framer-motion";
 
+/* Assets */
+import heart from "../../assets/img/heart.png";
+
 export default function Prices() {
   return (
     <motion.main
@@ -19,6 +22,12 @@ export default function Prices() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-5 text-center">
+            <h4 className="my-5">
+              <strong className="stroked-title">
+                Prices!
+                <img className="ms-3" src={heart} width="50px" />
+              </strong>
+            </h4>
             <img
               src={profilePicture}
               className="profile-picture img-thumbnail"
@@ -28,16 +37,15 @@ export default function Prices() {
         </div>
         <div className="row justify-content-center patrick-hand">
           <div className="col-8 col-md-6 color_third text-center py-5">
-            <h4>
-              Check out the prices of my <u>illustrations</u> and
-              <u> refsheets</u> below!
+            <p>
+              Check out the prices of my <u>artwork</u>!
               <br />
               <br />
-              * All the images below are not in full quality! <br />
-            </h4>
-            <small>
-              (otherwise the website would renderize itself very slowly! ;P)
-            </small>
+              * All images shown here are not in full quality! <br />
+              <small>
+                (otherwise the website would renderize itself very slowly! ;P)
+              </small>
+            </p>
           </div>
         </div>
 
@@ -45,13 +53,13 @@ export default function Prices() {
           <div className="col-12 text-center">
             <Link
               to="illustrations"
-              className="btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-3 me-3"
+              className="my-3 btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-5 me-3"
             >
               Illustrations
             </Link>
             <Link
               to="refsheets"
-              className="btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-3 me-3"
+              className="btn btn-danger hvr-wobble-top btn-lg btn-custom_1 px-5 me-3"
             >
               RefSheets
             </Link>
