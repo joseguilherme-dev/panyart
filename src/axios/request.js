@@ -7,7 +7,6 @@ const request = axios.create({
   withCredentials: true,
 });
 
-console.log(request.defaults.withCredentials);
 request.defaults.withCredentials = true;
 
 export default request;
