@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import SocialIcons from "./SocialIcons";
 import PreFooter from "./PreFooter";
 
+import "./assets/styles.css";
+
 function Footer() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,8 +27,14 @@ function Footer() {
       <div className="row pt-2">
         <div className="col-12 text-center bg-white" id="credits">
           <small>
-            © PanYart | All rights reserved | Developed with ♡ by:
-            @joseguilherme-dev
+            © PanYart | All rights reserved | Developed with ♡ by:{" "}
+            <a
+              className="text-dark"
+              href="https://github.com/nova-script"
+              target="_blank"
+            >
+              <u>@nova-script</u>
+            </a>
           </small>
         </div>
       </div>
