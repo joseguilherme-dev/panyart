@@ -37,9 +37,9 @@ function renderRefsheets() {
 }
 
 export default function RefSheets() {
-  //useEffect(() => {
-  //  window.scrollTo(0, 0);
-  //}, []);
+  useEffect(() => {
+    window.scrollTo(0, 1000);
+  }, []);
 
   return (
     <motion.div
