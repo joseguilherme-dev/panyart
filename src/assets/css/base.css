@@ -1,13 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap");
+
 * {
-  --primary: rgb(252, 226, 173);
+  --primary: #fce2ad;
   --secondary: rgb(234, 154, 101);
-  --third: rgb(120, 68, 16);
+  --third: #784410;
   --bluedy: rgb(249, 84, 141);
 }
 
 html,
-body {
+body,
+#root,
+.App {
+  scroll-snap-stop: normal;
   height: 100% !important;
+  font-family: "Comic Neue", cursive !important;
 }
 
 body {
@@ -49,11 +55,6 @@ a.color_bluedy {
   background-repeat: no-repeat;
   background-position-x: start;
   background-position-y: center;
-  font-family: "Patrick Hand", cursive;
-}
-
-.patrick-hand {
-  font-family: "Patrick Hand", cursive;
 }
 
 @media only screen and (max-width: 768px) {
@@ -77,8 +78,8 @@ a.color_bluedy {
   );
   color: rgba(133, 90, 49, 1) !important;
   border: 2px solid rgba(133, 90, 49, 1) !important;
-  font-family: "Patrick Hand", cursive;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 700;
   box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
 }
 
@@ -96,19 +97,10 @@ a.color_bluedy {
   max-width: 170px !important;
 }
 
-.introduction {
-  font-family: "Patrick Hand", cursive;
-}
-
 /**     PRICES      **/
 .prices-section .profile-picture {
   border-radius: 50%;
   width: 50%;
-}
-
-/**    SOCIAL       **/
-.interested {
-  font-family: "Patrick Hand", cursi;
 }
 
 /*****    ICONS     *****/
@@ -131,11 +123,6 @@ input {
   border: 2px solid rgba(133, 90, 49, 1) !important;
   box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
   border-radius: 30px !important;
-}
-
-/**     CREDITS     **/
-#credits {
-  font-family: "Patrick Hand", cursive;
 }
 
 .coins-box {
@@ -174,4 +161,28 @@ input {
   /* Corrects font smoothing for webkit */
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
+}
+
+/* UI */
+.color-primary {
+  color: var(--primary);
+}
+
+.bg-custom-white {
+  background: rgb(255, 247, 250);
+}
+
+p {
+  font-size: 26px !important;
+}
+
+small {
+  font-size: 16px !important;
+}
+
+.stroked-title {
+  font-size: 50px;
+  color: white;
+  font-weight: bold !important;
+  -webkit-text-stroke: 2px var(--third);
 }
