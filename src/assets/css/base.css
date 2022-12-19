@@ -1,184 +1,177 @@
 * {
-    --primary: rgb(252, 226, 173);
-    --secondary: rgb(234, 154, 101);
-    --third: rgb(120, 68, 16);
-    --bluedy: rgb(249, 84, 141);
+  --primary: rgb(252, 226, 173);
+  --secondary: rgb(234, 154, 101);
+  --third: rgb(120, 68, 16);
+  --bluedy: rgb(249, 84, 141);
+}
+
+html,
+body {
+  height: 100% !important;
 }
 
 body {
-    background-color: var(--primary);
-    overflow-x: hidden;
+  background-color: var(--primary);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 hr {
-    border: 2px solid white;
-    background-color: white;
+  border: 2px solid white;
+  background-color: white;
 }
 
 .color_primary {
-    color: var(--primary) !important;
+  color: var(--primary) !important;
 }
 
 .font-weight-medium {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .color_primary_shadow {
-    text-shadow: 1px 1px 2px white;
+  text-shadow: 1px 1px 2px white;
 }
 
 .color_secondary {
-    color: var(--secondary) !important;
+  color: var(--secondary) !important;
 }
 .color_third {
-    color: var(--third);
+  color: var(--third);
 }
 a.color_bluedy {
-    color: var(--bluedy) !important;
+  color: var(--bluedy) !important;
 }
 
 #blob_bg {
-    /*background: url(../img/blob_2.png);*/
-    background-size: 75%;
-    padding-right: 75px;
-    background-repeat: no-repeat;
-    background-position-x: start;
-    background-position-y: center;
-    font-family: 'Patrick Hand', cursive;
+  background-size: 75%;
+  padding-right: 75px;
+  background-repeat: no-repeat;
+  background-position-x: start;
+  background-position-y: center;
+  font-family: "Patrick Hand", cursive;
 }
 
 .patrick-hand {
-    font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
 }
-
 
 @media only screen and (max-width: 768px) {
-    #blob_bg {
-        background-size: 100%;
-        background-position-x: center;
-        padding: 60px 0px;
-        padding-left: 30px;
-    }
+  #blob_bg {
+    background-size: 100%;
+    background-position-x: center;
+    padding: 60px 0px;
+    padding-left: 30px;
+  }
 }
-
 
 .btn-custom_1 {
-    border-radius: 50px !important;
-    background: rgb(254,240,228);
-    background: radial-gradient(circle, rgba(254,240,228,1) 0%, rgba(254,240,227,1) 28%, rgba(252,204,155,1) 100%, rgba(242,166,117,1) 100%);
-    color: rgba(133, 90, 49, 1) !important;
-    border: 2px solid rgba(133, 90, 49, 1) !important;
-    font-family: 'Patrick Hand', cursive;
-    font-weight: bold;
-    box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
+  border-radius: 50px !important;
+  background: rgb(254, 240, 228);
+  background: radial-gradient(
+    circle,
+    rgba(254, 240, 228, 1) 0%,
+    rgba(254, 240, 227, 1) 28%,
+    rgba(252, 204, 155, 1) 100%,
+    rgba(242, 166, 117, 1) 100%
+  );
+  color: rgba(133, 90, 49, 1) !important;
+  border: 2px solid rgba(133, 90, 49, 1) !important;
+  font-family: "Patrick Hand", cursive;
+  font-weight: bold;
+  box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
 }
 
-.btn-custom_1:focus, .btn-custom_1:active {
-    border: 2px solid rgba(133, 90, 49, 1) !important;
-    box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
+.btn-custom_1:focus,
+.btn-custom_1:active {
+  border: 2px solid rgba(133, 90, 49, 1) !important;
+  box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
 }
 .btn-custom_1:hover {
-    box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;;
+  box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
 }
 
 /**     HOME        **/
 .panyart_gif {
-    max-width: 170px !important;
+  max-width: 170px !important;
 }
 
 .introduction {
-    font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
 /**     PRICES      **/
-.gatomaluko {
-    border-radius: 50%;
-    width: 50%;
+.prices-section .profile-picture {
+  border-radius: 50%;
+  width: 50%;
 }
-
 
 /**    SOCIAL       **/
 .interested {
-    font-family: 'Patrick Hand', cursi
+  font-family: "Patrick Hand", cursi;
 }
 
 /*****    ICONS     *****/
 .icon_box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    text-decoration: none;
-    background-color: white;
-    border-radius: 50px;
-    font-size: large;
-    margin-right: 10px;
-    color: var(--secondary) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50px;
+  font-size: large;
+  margin-right: 10px;
+  color: var(--secondary) !important;
 }
-
-/*
-.facebook_icon {color: #4267B2 !important;}
-.twitter_icon {color: #1DA1F2 !important;}
-.deviantart_icon {color: #05CC46 !important;}
-.instagram_icon {color: #833AB4 !important;}*/
-
 
 input {
-    border: 2px solid rgba(133, 90, 49, 1) !important;
-    box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
-    border-radius: 30px !important;
+  border: 2px solid rgba(133, 90, 49, 1) !important;
+  box-shadow: 1px 1px 2px 1px rgba(133, 90, 49, 0.5) !important;
+  border-radius: 30px !important;
 }
-
-
-
 
 /**     CREDITS     **/
 #credits {
-    font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
 }
 
-
-
 .coins-box {
-    position: relative;
+  position: relative;
 }
 
 .coins-box input {
-    font-size: 20px;
-    font-weight: bold;
-    color: black !important;
-    background: white !important;
+  font-size: 20px;
+  font-weight: bold;
+  color: black !important;
+  background: white !important;
 }
 .coins-box img {
-    position: absolute;
-    width: 35px;
-    left: 63%;
-    top: 15%;
+  position: absolute;
+  width: 35px;
+  left: 63%;
+  top: 15%;
 }
 
-
 .btn-clean {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
 
-    background: transparent;
+  background: transparent;
 
-    /* inherit font & color from ancestor */
-    color: inherit;
-    font: inherit;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
 
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: normal;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
 
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 }
