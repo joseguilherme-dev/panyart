@@ -13,6 +13,9 @@ import { validateEmail, validatePassword } from "./validators";
 import { motion } from "framer-motion";
 import request from "../../../axios/request";
 
+/* Assets */
+import heart from "../../../assets/img/heart.png";
+
 function Login() {
   // Fields
   const [email, setEmail] = useState("");
@@ -102,13 +105,16 @@ function Login() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6 text-center px-5 color_third">
-            <h3>
-              <strong>Do you know?</strong>
-            </h3>
+            <h4 className="my-5">
+              <strong className="stroked-title">
+                Did you know?
+                <img className="ms-3" src={heart} width="50px" />
+              </strong>
+            </h4>
             <p className="font-weight-medium">
-              As a comissioner of mine, you will receive{" "}
-              <strong>Pan Coins!</strong> <br />
+              As a comissioner, you receive <strong>Pan Coins!</strong> <br />
             </p>
+
             <small className="font-weight-medium">
               From every art you buy, you will receive a card containing a code
               <br />
@@ -171,7 +177,7 @@ function Login() {
           <div className="col-md-4 text-center">
             <hr className="mb-4"></hr>
             <p className="color_third font-weight-medium">
-              Wanna check the art oven?
+              <strong>Wanna meet the art oven?</strong>
             </p>
             <Link
               to="/signup"

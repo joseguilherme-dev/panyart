@@ -169,7 +169,7 @@ function Edit() {
                     defaultValue={discord}
                     className="py-1 text-center px-3 w-100"
                   ></input>
-                  <small>Please, inform your # ID as well.</small>
+                  <small>Please, don't forget your #ID.</small>
                 </div>
                 <div className="col-6">
                   <small>
