@@ -1,5 +1,5 @@
 /**/
-#prefooter {
+footer {
   width: 100% !important;
   position: relative;
   background: linear-gradient(
@@ -9,5 +9,20 @@
     ),
     url(./img/bg2.png);
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
+}
+
+.pancoin {
+  -webkit-transition: transform 1s ease;
+  -moz-transition: transform 1s ease;
+  -ms-transition: transform 1s ease;
+  -o-transition: transform 1s ease;
+  transition: transform 1s ease;
+}
+
+.pancoin:hover {
+  transform: translateX(-1px) rotateY(180deg); /* ALSO EXTRA TRANSFORM PROPERTIES ADDED FOR COMPATIBILITY*/
+  -ms-transform: translateX(-1px) rotateY(180deg); /* IE 9 */
+  -webkit-transform: translateX(-1px) rotateY(180deg); /* Chrome, Safari, Opera */
 }
