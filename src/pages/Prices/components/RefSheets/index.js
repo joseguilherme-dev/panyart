@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 /* Animated Routes */
 import { motion } from "framer-motion";
@@ -37,8 +37,10 @@ function renderRefsheets() {
 }
 
 export default function RefSheets() {
+  const reference = useRef();
+
   useEffect(() => {
-    window.scrollTo(0, 1000);
+    reference.current.scrollIntoView();
   }, []);
 
   return (
@@ -47,8 +49,9 @@ export default function RefSheets() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 1 }}
+      ref={reference}
+      className="pt-5"
     >
-      <hr />
       <div className="my-5">
         <h2>♥ REFSHEETS ♥ </h2>
       </div>
