@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 /* Animated Routes */
 import { motion } from "framer-motion";
@@ -42,8 +42,10 @@ function renderIllustrations() {
 }
 
 function Commissions() {
+  const reference = useRef();
+
   useEffect(() => {
-    window.scrollTo(0, 1000);
+    reference.current.scrollIntoView();
   }, []);
 
   return (
@@ -52,8 +54,9 @@ function Commissions() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 1 }}
+      ref={reference}
+      className="pt-5"
     >
-      <hr />
       <div className="my-5">
         <h2>♥ ILLUSTRATIONS ♥ </h2>
         <h5 className="mb-5">
