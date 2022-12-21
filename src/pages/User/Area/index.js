@@ -1,50 +1,40 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Navigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Cookies from "universal-cookie";
 
-// Axios
-import axios from "axios";
-import request from "../../../axios/request";
+// Utils
+import checkIfUserIsLoggedIn from "../_utils/checkIfUserIsLoggedIn";
 
 // Animated Routes
 import { motion } from "framer-motion";
 
-// Images
+// Assets
 import panCoinsImg from "./assets/img/pancoins.png";
 
 function Area() {
-  const [userInfo, setUserInfo] = useState({});
+  // Core:
   const navigate = useNavigate();
   const cookies = new Cookies();
 
-  async function checkIfUserIsLoggedIn() {
-    console.log(cookies.get("jwt"));
-    await request
-      .get("/auth/personal", {
-        headers: {
-          authorization: cookies.get("jwt"),
-        },
-      })
-      .catch((error) => {
-        console.log(error);
-        navigate("/login");
-      })
-      .then((response) => {
-        setUserInfo(response.data.personal);
-      });
-  }
+  // Component-specific data:
+  const [userPersonalInformation, setUserPersonalInformation] = useState({});
 
+  // Verify if the user is logged in before anything.
+  useEffect(() => {
+    (async () => {
+      setUserPersonalInformation(await checkIfUserIsLoggedIn());
+      /* If the user is trying to enter in an exclusive area for logged in users
+      then the user must be redirected to login page.*/
+      if (!userPersonalInformation) navigate("/login");
+    })();
+  }, []);
+
+  // Component-specific fuctions:
   async function handleLogout(e) {
     e.preventDefault();
     cookies.remove("jwt", { path: "/" });
     navigate("/login");
   }
-
-  useEffect(() => {
-    (async () => {
-      await checkIfUserIsLoggedIn();
-    })();
-  }, []);
 
   return (
     <motion.main
@@ -57,11 +47,9 @@ function Area() {
         <div className="row justify-content-center text-center">
           <div className="col-md-5 mt-3 mb-1 color_third">
             <p>
-              {" "}
-              Hey, <strong>{userInfo.nickname}</strong>!
+              Hey, <strong>{userPersonalInformation.nickname}</strong>!
             </p>
             <small>
-              {" "}
               <i>Your Pan Coins:</i>
             </small>
             <br />
@@ -69,7 +57,7 @@ function Area() {
               <input
                 className="text-center py-2 w-50"
                 type="text"
-                defaultValue={userInfo.coins}
+                defaultValue={userPersonalInformation.coins}
                 disabled
               />
               <img src={panCoinsImg} />
@@ -80,8 +68,6 @@ function Area() {
                 <Link
                   to="redeem"
                   className="btn hvr-wobble-top btn-lg btn-custom_1 w-100 px-4 me-3"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
                 >
                   Redeem Coins
                 </Link>
