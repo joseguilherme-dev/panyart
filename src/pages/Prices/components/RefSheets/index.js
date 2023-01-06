@@ -28,9 +28,12 @@ function renderRefsheets() {
         <div className="row justify-content-center align-items-center">
           {renderRefsheetImages(refsheet.images, refsheet.imageCol)}
         </div>
-        <h4 className="my-5 pb-5">
-          <strong className="mb-5 pb-5">{refsheet.title}</strong>
+        <h4 className="mt-5">
+          <strong>{refsheet.title}</strong>
+          <br />
+          {refsheet.secondTitle}
         </h4>
+        <h4 className="pb-5 mb-5 ">{refsheet.subtitle}</h4>
       </div>
     );
   });
